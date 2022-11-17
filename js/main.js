@@ -10,19 +10,19 @@ function qsc(text) {
     return document.querySelector(`.${text}`);
 }
 
-function goTo(text) {
+function goTo(text) {   
     switch(text) {
         case 'about-me':
-            window.location.href = '/over-mij.html';
+            window.location.href = 'over-mij.html';
             break;
         case 'projects':
-            window.location.href = '/projecten.html';
+            window.location.href = 'projecten.html';
             break;
         case 'contact':
-            window.location.href = '/contact.html';
+            window.location.href = 'contact.html';
             break;
         case 'home':
-            window.location.href = '/index.html';
+            window.location.href = 'index.html';
             break;
     }
 }
