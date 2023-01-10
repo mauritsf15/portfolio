@@ -5,7 +5,7 @@ const projectButton = qsc('projecten');
 const projectButtonTwo = qsc('left .projecten');
 const contactButton = qsc('contact');
 const title = document.querySelector('h1');
-const homeTitle = document.querySelector('.title')
+const homeTitle = document.querySelector('.title');
 
 let writeText = 'portfolio van maurits';
 let i = 0;
