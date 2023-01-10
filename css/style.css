@@ -141,9 +141,6 @@ li {
     font-family: 'Comfortaa';
 }
 
-.leftspace {
-}
-
 .mobile-nav {
     display: none;
 }
@@ -222,11 +219,11 @@ li {
     }
 
     .projects h2 {
-        font-size: large;
+        font-size: larger;
     }
 
     .projects p, .projects a {
-        font-size: small;
+        font-size: medium;
     }
 
     .right .contact-img {
