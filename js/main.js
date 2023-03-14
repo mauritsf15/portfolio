@@ -52,9 +52,9 @@ function del() {
         setTimeout(write, 50);
         i = 0;
         if (writeText == 'welkom :)') {
-            writeText = 'portfolio van maurits'
+            writeText = 'portfolio van maurits';
         } else {
-            writeText = 'welkom :)'
+            writeText = 'welkom :)';
         }
     }
 }
