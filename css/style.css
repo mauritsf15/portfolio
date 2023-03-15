@@ -1,6 +1,6 @@
 :root {
-    --yellow: #FFE66D;
-    --cyan: #00C2D1;
+    --primary: #89CFF0;
+    --secondary: #FFD6E0;
 }
 
 @font-face {
@@ -15,20 +15,28 @@
 body {
     margin: 0;
     font-family: 'Comfortaa';
+    overflow: hidden;
 }
 
-header {
+.wrapper {
     width: 100dvw;
     height: 100dvh;
-    background-color: var(--yellow);
-    position: fixed;
 }
 
-header .title {
+.header {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    position: absolute;
+    z-index: 0;
+}
+
+.header .title {
     position: absolute;
     top: 10%;
     left: 10%;
     text-align: right;
+    z-index: 1;
 }
 
 .title .hint {
@@ -42,6 +50,7 @@ header .title {
     width: 5%;
     transition-duration: 1s;
     margin-top: -10px;
+    border-color: black;
 }
 
 .title:hover .hint {
@@ -72,38 +81,125 @@ header .title {
 
 .index {
     position: absolute;
-    top: 30vh;
-    right: 30vw;
+    top: 30%;
+    right: 30%;
+    z-index: 0;
+    transition-duration: 0.3s;
+    border-radius: 10px;
 }
 
 .index > h1 {
     cursor: pointer;
     transition-duration: 0.3s;
+    z-index: 1;
 }
 
 .background-text {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 .background-text p {
-    font-size: 100vh;
+    line-height: 100vh;
+    font-size: 70vh;
     position: absolute;
     opacity: 0;
     margin: 0;
     transition-duration: 1s;
+    padding-left: 20px;
 }
 
-header:has(.index .projects:hover) .proj {
+.header:has(.index .projects:hover) .proj {
     opacity: 0.2 !important;
 }
 
-header:has(.index .about-me:hover) .abme {
+.header:has(.index .about-me:hover) .abme {
     opacity: 0.2 !important;
 }
 
-header:has(.index .contact:hover) .con {
+.header:has(.index .contact:hover) .con {
     opacity: 0.2 !important;
+}
+
+.projects-div {
+    position: relative;
+    top: 100vh;
+    margin: 0;
+    z-index: 5;
+    height: 90%;
+    left: 5%;
+    right: 5%;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    z-index: 5;
+    padding: 20px;
+    transition-duration: 1s;
+    outline: 2px solid black
+}
+
+.about-me-div {
+    position: relative;
+    top: 10vh;
+    margin: 0;
+    z-index: 5;
+    height: 90%;
+    left: 5%;
+    right: 5%;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    z-index: 5;
+    padding: 20px;
+    transition-duration: 1s;
+    outline: 2px solid black
+}
+
+.contact-div {
+    position: relative;
+    top: 100vh;
+    margin: 0;
+    z-index: 5;
+    height: 90%;
+    left: 5%;
+    right: 5%;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    z-index: 5;
+    padding: 20px;
+    transition-duration: 1s;
+    outline: 2px solid black
+}
+
+/* .projects-div > * {
+    margin: 0;
+} */
+
+#projects, #about-me, #contact {
+    position: absolute;
+    margin: 0 !important;
+}
+
+.wrapper:has(.projects:hover) .projects-div {
+    top: 80vh;
+}
+
+.wrapper:has(#projects:target) .projects-div {
+    top: 10vh;
+}
+
+.wrapper:has(.about-me:hover) .about-me-div {
+    top: 80vh;
+}
+
+.wrapper:has(#about-me:target) .about-me-div {
+    top: 10vh;
+}
+
+.wrapper:has(.contact:hover) .contact-div {
+    top: -10vh;
+}
+
+.wrapper:has(#contact:target) .contact-div {
+    top: -70vh;
 }
