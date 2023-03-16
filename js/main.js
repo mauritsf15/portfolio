@@ -70,3 +70,26 @@ function changePage(newPage) {
 projectsIndex.addEventListener('click', function() {changePage('projects')});
 aboutMeIndex.addEventListener('click', function() {changePage('aboutMe')});
 contactIndex.addEventListener('click', function() {changePage('contact')});
+
+/*
+
+Closing pages
+
+*/
+
+const closeBtn = document.querySelectorAll('.close');
+
+function closePage(data) {
+    if (data.srcElement.classList[2] == 'close') {
+        window.location.replace('#');
+    } else if (data.srcElement.parentElement.classList[0] == 'background-text') {
+        window.location.replace('#');
+    } else {
+        console.log('no')
+    }
+}
+
+document.addEventListener('click', closePage);
+closeBtn.forEach(e => function(e) {
+    e.addEventListener('click', closePage);
+});

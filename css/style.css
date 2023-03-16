@@ -16,10 +16,18 @@ body {
     margin: 0;
     font-family: 'Comfortaa';
     overflow: hidden;
+    background-color: var(--primary);
+}
+
+.flex i {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
 }
 
 .wrapper {
-    width: 100dvw;
+    width: 100vw;
     height: 100dvh;
 }
 
@@ -29,6 +37,7 @@ body {
     background-color: var(--primary);
     position: absolute;
     z-index: 0;
+    overflow: hidden;
 }
 
 .header .title {
@@ -50,6 +59,9 @@ body {
     width: 5%;
     transition-duration: 1s;
     margin-top: -10px;
+}
+
+hr {
     border-color: black;
 }
 
@@ -71,7 +83,11 @@ body {
     display: inline-block;
 }
 
-.letter:hover {
+.letter:nth-child(even):hover {
+    transform: scaleX(1.2) scaleY(0.8) !important;
+}
+
+.letter:nth-child(odd):hover {
     transform: scaleX(0.8) scaleY(1.2) !important;
 }
 
@@ -124,82 +140,159 @@ body {
 }
 
 .projects-div {
-    position: relative;
+    position: absolute;
     top: 100vh;
     margin: 0;
     z-index: 5;
-    height: 90%;
-    left: 5%;
-    right: 5%;
+    /* height: 90vh; */
+    width: 90%;
     border-radius: 25px;
     background-color: var(--secondary);
     z-index: 5;
     padding: 20px;
     transition-duration: 1s;
-    outline: 2px solid black
+    outline: 2px solid black;
+    opacity: 0;
+    min-height: 80vh;
 }
 
 .about-me-div {
-    position: relative;
-    top: 10vh;
-    margin: 0;
-    z-index: 5;
-    height: 90%;
-    left: 5%;
-    right: 5%;
-    border-radius: 25px;
-    background-color: var(--secondary);
-    z-index: 5;
-    padding: 20px;
-    transition-duration: 1s;
-    outline: 2px solid black
-}
-
-.contact-div {
-    position: relative;
+    position: absolute;
     top: 100vh;
     margin: 0;
     z-index: 5;
-    height: 90%;
-    left: 5%;
-    right: 5%;
+    /* height: 90vh; */
+    width: 90%;
     border-radius: 25px;
     background-color: var(--secondary);
     z-index: 5;
     padding: 20px;
     transition-duration: 1s;
-    outline: 2px solid black
+    outline: 2px solid black;
+    opacity: 0;
+    min-height: 80vh;
 }
 
-/* .projects-div > * {
+.contact-div {
+    position: absolute;
+    top: 100vh;
     margin: 0;
-} */
+    z-index: 5;
+    /* height: 90vh; */
+    width: 90%;
+    border-radius: 25px;
+    background-color: var(--secondary);
+    z-index: 5;
+    padding: 20px;
+    transition-duration: 1s;
+    outline: 2px solid black;
+    opacity: 0;
+    min-height: 80vh;
+}
+
+.flex h3 {
+    width: 100%;
+}
+
+.projects-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project {
+    min-width: 300px;
+    background-color: rgba(74, 74, 74, 0.2);
+    border-radius: 15px;
+    outline: 1px solid black;
+    padding: 5px 15px;
+    margin: 10px;
+    flex: 1;
+    box-shadow: 5px 5px 5px 0px rgba(25,25,25, 0.4);
+    transition-duration: 0.5s;
+}
+
+.project:hover {
+    cursor: pointer;
+    box-shadow: 7px 7px 7px 3px rgba(25,25,25, 0.4);
+    background-color: rgba(74, 74, 74, 0.1);
+}
+
+.wrapper:has(.projects:hover) .projects-div {
+    top: 80vh;
+    opacity: 1;
+}
+
+.wrapper:has(#projects:target) .projects-div {
+    top: 10vh;
+    opacity: 1;
+}
+
+body:has(#projects:target) {
+    overflow-y: auto;
+}
+
+.wrapper:has(.about-me:hover) .about-me-div {
+    top: 80vh;
+    opacity: 1;
+}
+
+.wrapper:has(#about-me:target) .about-me-div {
+    top: 10vh;
+    opacity: 1;
+}
+
+body:has(#about-me:target) {
+    overflow-y: auto;
+}
+
+.wrapper:has(.contact:hover) .contact-div {
+    top: 80vh;
+    opacity: 1;
+}
+
+.wrapper:has(#contact:target) .contact-div {
+    top: 10vh;
+    opacity: 1;
+}
+
+body:has(#contact:target) {
+    overflow-y: auto;
+}
+
+body:has(#projects:target) .contact-div, body:has(#projects:target) .about-me-div {
+    display: none;
+}
+
+body:has(#contact:target) .projects-div, body:has(#contact:target) .about-me-div {
+    display: none;
+}
+
+body:has(#about-me:target) .projects-div, body:has(#about-me:target) .contact-div {
+    display: none;
+}
 
 #projects, #about-me, #contact {
     position: absolute;
     margin: 0 !important;
 }
 
-.wrapper:has(.projects:hover) .projects-div {
-    top: 80vh;
+.flex {
+    display: flex;
+    position: relative;
+    justify-content: center;
 }
 
-.wrapper:has(#projects:target) .projects-div {
-    top: 10vh;
+.about-me-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
-.wrapper:has(.about-me:hover) .about-me-div {
-    top: 80vh;
+.about-me-flex > * {
+    flex: 1;
 }
 
-.wrapper:has(#about-me:target) .about-me-div {
-    top: 10vh;
-}
-
-.wrapper:has(.contact:hover) .contact-div {
-    top: -10vh;
-}
-
-.wrapper:has(#contact:target) .contact-div {
-    top: -70vh;
+.about-me-flex > img {
+    min-width: 400px;
+    margin-right: 100px;
 }
