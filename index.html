@@ -13,32 +13,105 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <h1 class="title"></h1>
-            <nav class="normal-nav">
-                <button class="over-mij btn">over mij</button>
-                <button class="projecten btn">projecten</button>
-                <button class="contact btn">contact</button>
-            </nav>
-            <nav class="mobile-nav">
-                <p><a href="over-mij.html">over mij</a> | <a href="projecten.html">projecten</a> | <a href="contact.html">contact</a></p>
-            </nav>
+        <div id="projects"></div>
+        <div id="about-me"></div>
+        <div id="contact"></div>
+        <header class="header">
+            <div class="title">
+                <h1>Hi.<br>I'm Maurits.</h1>
+                <p class="hint">click me to get started</p>
+                <hr>
+            </div>
+            <div class="index">
+                <h1 class="projects">Projects</h1>
+                <h1 class="about-me">About&nbsp;me</h1>
+                <h1 class="contact">Contact</h1>
+            </div>
+            <div class="background-text">
+                <p class="proj">PROJECTS</p>
+                <p class="abme">ABOUT ME</p>
+                <p class="con">CONTACT</p>
+            </div>
         </header>
-        <main>
-            <article class="left">
-                <p class="intro">Hoi! Ik ben Maurits.<br>
-                Welkom op mijn portfolio.</p>
-                <span class="arrow-down">
-                    <i class="fa-solid fa-arrow-down"></i>
-                </span>
-                <br>
-                <button class="projecten btn">projecten</button>
-            </article>
-            <article class="right">
-                <img class="img" src="img/logo.jpg" alt="Logo">
-            </article>
-        </main>
+        <div class="flex">
+            <div class="projects-div">
+                <h1>Projects - click a card for more information</h1>
+                <i class="fa-solid fa-xmark close"></i>
+                <div class="projects-flex">
+                    <div class="project project-portfolio">
+                        <h3>Portfolio</h3>
+                        <hr>
+                        <p>
+                            The webpage you're looking at right now is - obviously - made by me.<br><br>
+                            My old portfolio website was in Dutch and out-of-date with my front-end skills, 
+                            therefore i started making a new website to show off my work!
+                        </p>
+                    </div>
+                    <div class="project project-42training">
+                        <h3>42Training</h3>
+                        <hr>
+                        <p>
+                            42Training needed a landing page that would increase clients. 
+                            And what better captivates someone than fun animations?<br><br>
+                        </p>
+                    </div>
+                    <div class="project project-mausino">
+                        <h3>Mausino</h3>
+                        <hr>
+                        <p>
+                            A custom casino with fake money - this was the first project i finished, 
+                            after 1-2 weeks of learning javascript.<br><br>It's not very pretty,
+                            but it's the first thing I made so why not put it in my portfolio!
+                        </p>
+                    </div>
+                    <div class="project project-tictactoe">
+                        <h3>Tic-Tac-Toe (BOT)</h3>
+                        <hr>
+                        <p>
+                            I'm proud of this one. With barely any knowledge of javascript at the time,
+                            I made a fully functioning bot with a local storage scoreboard that sorts.<br><br>
+                            Do you think you can beat the robot?
+                        </p>
+                    </div>
+                    <div class="project project-portfolio">
+                        <h3>Your website?</h3>
+                        <hr>
+                        <p>
+                            Do you want your website to be made by me? Click here!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-me-div">
+                <h1>About me</h1>
+                <i class="fa-solid fa-xmark close"></i>
+                <div class="about-me-flex">
+                    <p>
+                        As you might know, I'm Maurits!<br><br>
+                        I'm an 18 year old programming enthusiast, but besides coding I also love gaming, 
+                        listening to music and meeting up with friends.<br><br>
+                        I've been programming since I was around 15-16, but it's been an on-and-off relationship between me and coding.
+                        <br><br>Since September 2023 I've been doing a Software Development study, learning HTML/CSS/JS and PHP.<br>
+                        With that come skills like MySQL, Vue.js and Symfony.<br><br>
+                        I live in the Netherlands
+                    </p>
+                    <img src="/img/about-me.png">
+                </div>
+            </div>
+            <div class="contact-div">
+                <h1>Contact</h1>
+                <i class="fa-solid fa-xmark close"></i>
+                <div class="about-me-flex">
+                    <p>
+                        Want to ask a question? Send me an email!<br><br>
+                        Email: <a href="mailto:mauritsfokkens@gmail.com">mauritsfokkens@gmail.com</a><br>
+                        Instagram: <a href="https://instagram.com/maurits0507" target="_blank">@maurits0507</a><br>
+                    </p>
+                    <img src="/img/contact.png">
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
 </body>
 </html>
