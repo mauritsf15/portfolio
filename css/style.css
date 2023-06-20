@@ -1,0 +1,166 @@
+:root {
+    --primary: #674da3;
+    --secondary:  #102B3F;
+    --accent: #E6F03C;
+    --text: #fffee4;
+    --darktext: #102B3F;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+* {
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
+    /* background-color: rgba(0,0,0,0.2);
+    outline: 1px solid red; */
+}
+
+.header {
+    width: 100vw;
+    position: fixed;
+    height: 50px;
+    background-color: var(--secondary);
+    z-index: 5;
+    overflow-y: hidden;
+    transition-duration: 0.5s;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-items {
+    margin-right: 30px;
+    color: var(--text);
+}
+
+.nav-item {
+    line-height: 50px;
+}
+
+.link {
+    color: var(--text);
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.link:hover {
+    color:var(--accent);
+}
+
+.title {
+    line-height: 50px;
+    font-size: 1.2em;
+    color: var(--text);
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.container {
+    height: 100dvh;
+    width: 100dvw;
+    background: linear-gradient(var(--primary), var(--secondary));
+    color: var(--text);
+}
+
+.hero {
+    position: relative;
+    margin-top: 50px;
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+}
+
+.hero-title {
+    margin-top: 100px !important;
+    font-size: 7vw;
+}
+
+.btn {
+    padding: 15px;
+    background-color: var(--accent);
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--darktext);
+    transition-duration: 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--secondary);
+    color: var(--accent);
+    scale: 1.1;
+}
+
+.btn-hero {
+    position: absolute;
+    aspect-ratio: 1/1;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.btn-projects {
+    top: 40vh;
+    left: 10vw;
+    width: 100px;
+    aspect-ratio: 1/1;
+    line-height: 100px;
+    animation: button-projects 30s linear 0s infinite normal;
+}
+
+.btn-about-me {
+    top: 30vh;
+    left: 50vw;
+    width: 75px;
+    aspect-ratio: 1/1;
+    line-height: 75px;
+    animation: button-about-me 30s linear 0s infinite normal;
+}
+
+.btn-contact {
+    top: 60vh;
+    left: 30vw;
+    width: 75px;
+    aspect-ratio: 1/1;
+    line-height: 75px;
+    animation: button-contact 30s linear 0s infinite normal;
+}
+
+/* @keyframes button-projects {
+    0% {top: 40vh; left: 10vw; transform: rotate(0deg);}
+    25% {top: 42vh; left: 12vw; transform: rotate(4deg);}
+    50% {top: 40vh; left: 15vw; transform: rotate(7deg);}
+    75% {top: 38vh; left: 12vw; transform: rotate(-2deg);}
+}
+
+@keyframes button-about-me {
+    0% {top: 30vh; left: 50vw; transform: rotate(0deg);}
+    20% {top: 28vh; left: 48vw; transform: rotate(-5deg);}
+    45% {top: 25vh; left: 50vw; transform: rotate(5deg);}
+    70% {top: 30vh; left: 48vw; transform: rotate(-5deg);}
+}
+
+@keyframes button-contact {
+    0% {top: 60vh; left: 30vw; transform: rotate(0deg);}
+    30% {top: 58vh; left: 28vw; transform: rotate(-5deg);}
+    55% {top: 55vh; left: 25vw; transform: rotate(-10deg);}
+    80% {top: 58vh; left: 28vw; transform: rotate(-5deg);}
+} */
+
+@media only screen and (max-width: 800px) {
+    .nav-items {
+        margin: auto;
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .header:target {
+        height: 100px !important;
+    }
+}
