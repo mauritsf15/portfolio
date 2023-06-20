@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Portfolio",
+        "subname": "19/06/2023",
+        "image": "portfolio.png",
+        "description": "This portfolio is obviously also made by me; in a 3 hour train ride from Rotterdam to London.",
+        "link": "https://mauritsf15.github.io/portfolio",
+        "source": "https://github.com/mauritsf15/portfolio"
+    },
+    {
+        "id": 2,
+        "name": "CV",
+        "subname": "13/04/2023",
+        "image": "cv.png",
+        "description": "I made a (dutch) Curriculum Vitae aka resume as a website.",
+        "link": "https://mauritsf15.github.io/cv",
+        "source": "https://github.com/mauritsf15/cv"
+    }
+]
