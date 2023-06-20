@@ -1,18 +1,9 @@
 [
     {
-        "id": 0,
-        "name": "42Training",
-        "subname": "27/05/2023",
-        "image": "profile.png",
-        "description": "42Training is a company that needed a website with general information about the company and a page for cases that they have had.",
-        "link": "https://42training.nl",
-        "source": ""
-    },
-    {
         "id": 1,
         "name": "Portfolio",
         "subname": "19/06/2023",
-        "image": "profile.png",
+        "image": "portfolio.png",
         "description": "This portfolio is obviously also made by me; in a 3 hour train ride from Rotterdam to London.",
         "link": "https://mauritsf15.github.io/portfolio",
         "source": "https://github.com/mauritsf15/portfolio"
